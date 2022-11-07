@@ -20,7 +20,7 @@ Then access `http://127.0.0.1:8000/api/menu-items` or `http://127.0.0.1:8000/api
 
 ![Preview Lab 3](https://res.cloudinary.com/dpebhamdp/image/upload/v1667824082/Labs/Lab3/lab3-input_kubpjx.png)
 
-It has full validation support done in the `serializers.py` - check that extra_kwargs section. Price cannot be less than 5 and inventory cannot be negative.
+It has full validation support done in the `serializers.py` - check that extra_kwargs section. Price cannot be less than 2 and inventory cannot be negative.
 
 ```python
 class MenuItemSerializer(serializers.ModelSerializer):
@@ -28,7 +28,7 @@ class MenuItemSerializer(serializers.ModelSerializer):
         model = MenuItem
         fields = ['id','title','price','inventory']
         extra_kwargs = {
-            'price': {'min_value': 5},
+            'price': {'min_value': 2},
             'inventory':{'min_value':0}
         }
 ```
