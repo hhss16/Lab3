@@ -3,8 +3,8 @@
 Please make sure you have pip and pipenv installed first. 
 
 ```sh
-git clone https://github.com/hhss16/Lab2
-cd Lab2
+git clone https://github.com/hhss16/Lab3
+cd Lab3
 pipenv shell
 pipenv install 
 python manage.py makemigrations 
